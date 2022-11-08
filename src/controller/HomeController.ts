@@ -6,6 +6,9 @@ import {
   Query,
   Redirect,
 } from '@nestjs/common';
+import { config } from 'dotenv';
+import { resolve } from 'path';
+config({ path: resolve(__dirname, '../../.env') });
 
 @Controller()
 export class HomeController {
@@ -38,5 +41,10 @@ export class HomeController {
   getCurrentTime() {
     const time = new Date();
     return time;
+  }
+
+  @Get('/getEnv')
+  getEnv() {
+    return process.env;
   }
 }

@@ -29,9 +29,8 @@ export class User extends Model {
   @Column(DataTypes.STRING(7))
   employeeNumber: string;
 
-  @AllowNull(false)
-  @Column(DataTypes.STRING(50))
-  username: string;
+  @Column({ type: STRING(100), allowNull: false })
+  userName: string;
 
   @AllowNull(false)
   @Column(DataTypes.STRING(50))

@@ -46,7 +46,7 @@ export class AttendanceServiceImpl implements AttendanceService {
   private async executeBulkCreate() {
     const users = (await this.userRepository.getAll()) as User[];
     for (let i = 1; i < 4; i++) {
-      let cursor = 133;
+      let cursor = 1;
       if (i > 1) {
         cursor = 1;
       }
@@ -61,6 +61,8 @@ export class AttendanceServiceImpl implements AttendanceService {
               tmp.timeCheckOut = '17:00';
               tmp.timeCheckInRequest = '08:00';
               tmp.timeCheckOutRequest = '17:00';
+              tmp.totalBreakTimeRequest = '1:00';
+              tmp.totalWorkTimeRequest = '8:00';
               tmp.requestTime =
                 year +
                 '/' +
