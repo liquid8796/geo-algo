@@ -69,6 +69,12 @@ export class Attendance extends Model {
   })
   timeCheckOutRequest: string;
 
+  @Column({ type: DataTypes.STRING(10), defaultValue: '' })
+  totalBreakTimeRequest: string;
+
+  @Column({ type: DataTypes.STRING(10), defaultValue: '' })
+  totalWorkTimeRequest: string;
+
   @Column({
     type: DataTypes.STRING(2),
     allowNull: false,
