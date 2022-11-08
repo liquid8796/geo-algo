@@ -5,6 +5,8 @@ export class AttendanceDTO {
   id: number;
   timeCheckIn: string;
   timeCheckOut: string;
+  totalBreakTime: string;
+  totalWorkTime: string;
   timeCheckInRequest: string;
   timeCheckOutRequest: string;
   totalBreakTimeRequest: string;

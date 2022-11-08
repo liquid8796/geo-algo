@@ -54,6 +54,18 @@ export class Attendance extends Model {
   timeCheckOut: string;
 
   @Column({
+    type: DataTypes.STRING(10),
+    defaultValue: '',
+  })
+  totalBreakTime: string;
+
+  @Column({
+    type: DataTypes.STRING(10),
+    defaultValue: '',
+  })
+  totalWorkTime: string;
+
+  @Column({
     type: DataTypes.STRING(5),
     defaultValue: '',
     allowNull: false,

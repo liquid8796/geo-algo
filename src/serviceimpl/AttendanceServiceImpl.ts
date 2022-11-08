@@ -59,6 +59,8 @@ export class AttendanceServiceImpl implements AttendanceService {
               const tmp = new AttendanceDTO();
               tmp.timeCheckIn = '08:00';
               tmp.timeCheckOut = '17:00';
+              tmp.totalBreakTime = '1:00';
+              tmp.totalWorkTime = '8:00';
               tmp.timeCheckInRequest = '08:00';
               tmp.timeCheckOutRequest = '17:00';
               tmp.totalBreakTimeRequest = '1:00';
