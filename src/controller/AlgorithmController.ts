@@ -48,7 +48,8 @@ export class AlgorithmController {
     for (let i = 0; i < students[0].length; i++) {
       for (let j = 0; j < students.length; j++) {
         if (totalPoint[j] !== null) {
-          totalPoint[j] = this.binaryStudentSum(students[j], 1);
+          // totalPoint[j] = this.binaryStudentSum(students[j], 1);
+          totalPoint[j] = this.sumStudent(students[j]);
         }
         if (j > 0) {
           if (minTime[i] > students[j][i][0]) {
