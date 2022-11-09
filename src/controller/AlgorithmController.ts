@@ -65,11 +65,11 @@ export class AlgorithmController {
         }
       }
     }
-    // return {
-    //   index: totalPoint.indexOf(Math.max(...totalPoint)),
-    //   total: Math.max(...totalPoint),
-    // };
-    return totalPoint;
+    return totalPoint
+      .map((e) => {
+        return { index: totalPoint.indexOf(e), total: e };
+      })
+      .filter((e) => e.total === Math.max(...totalPoint));
   }
   binaryStudentSum(list: any[][], type: number) {
     return this.recursiveStudentSum(0, list.length - 1, list, type);
