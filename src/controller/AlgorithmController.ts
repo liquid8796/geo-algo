@@ -97,6 +97,7 @@ export class AlgorithmController {
     for (let i = 0; i < list.length; i++) {
       total += list[i][1];
     }
+    return total;
   }
 
   removeItem<T>(arr: Array<T>, value: T) {
