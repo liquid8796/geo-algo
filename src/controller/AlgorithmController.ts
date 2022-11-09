@@ -31,6 +31,7 @@ export class AlgorithmController {
     const result = this.main(list);
     const endTime = performance.now();
     return {
+      result: result,
       time: endTime - startTime,
     };
   }
