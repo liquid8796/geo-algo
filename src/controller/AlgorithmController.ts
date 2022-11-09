@@ -31,10 +31,6 @@ export class AlgorithmController {
     const result = this.main(list);
     const endTime = performance.now();
     return {
-      result: {
-        index: result.indexOf(Math.max(...result)),
-        total: Math.max(...result),
-      },
       time: endTime - startTime,
     };
   }
