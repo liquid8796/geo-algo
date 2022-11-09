@@ -92,6 +92,13 @@ export class AlgorithmController {
     }
   }
 
+  sumStudent(list: any[][]) {
+    let total = 0;
+    for (let i = 0; i < list.length; i++) {
+      total += list[i][1];
+    }
+  }
+
   removeItem<T>(arr: Array<T>, value: T) {
     const index = arr.indexOf(value);
     if (index > -1) {
