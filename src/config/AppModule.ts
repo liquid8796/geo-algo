@@ -22,7 +22,7 @@ import { TimeoutInterceptor } from './TimeoutInterceptor';
 export class ConfigModule {}
 
 @Module({
-  imports: [ConfigModule],
+  // imports: [ConfigModule],
   providers: [
     UserRepositoryImpl,
     AttendanceRepositoryImpl,

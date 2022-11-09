@@ -15,7 +15,6 @@ const sequelizeInstance = {
   provide: 'SEQUELIZE',
   useFactory: async () => {
     const sequelize = new Sequelize(uri, {
-      logging: false,
       pool: {
         max: 200,
         min: 0,

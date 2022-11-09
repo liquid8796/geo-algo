@@ -43,7 +43,7 @@ export class HomeController {
     return time;
   }
 
-  @Get('/getEnv')
+  @Get('/env')
   getEnv() {
     return process.env;
   }
