@@ -41,7 +41,10 @@ export class AlgorithmController {
   ) {
     const result: any[][][] = [];
     for (let i = 0; i < n; i++) {
-      for (let j = 0; j < q; j++) {}
+      for (let j = 0; j < q; j++) {
+        result[i][j][0] = Math.floor(Math.random() * 1000);
+        result[i][j][1] = Math.floor(Math.random() * 11);
+      }
     }
   }
 
