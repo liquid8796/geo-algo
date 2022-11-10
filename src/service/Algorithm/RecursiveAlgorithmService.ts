@@ -1,3 +1,3 @@
 export interface RecursiveAlgorithmService {
-  RecursiveBinarySum(): number;
+  RecursiveBinarySum(list: any, recursiveFunction: any): number;
 }

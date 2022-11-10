@@ -32,7 +32,6 @@ export class AlgorithmController {
     @Query('t') t: number,
     @Query('s') s: number,
   ) {
-    for (let i = 0; i < s.length; i++) {}
     return S;
   }
 
@@ -84,9 +83,11 @@ export class AlgorithmController {
       })
       .filter((e) => e.total === Math.max(...totalPoint));
   }
+
   binaryStudentSum(list: any[][], type: number) {
     return this.recursiveStudentSum(0, list.length - 1, list, type);
   }
+
   recursiveStudentSum(
     low: number,
     high: number,

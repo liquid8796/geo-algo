@@ -9,6 +9,8 @@ import { departmentProviders } from 'src/entity/Department';
 import { userProviders } from 'src/entity/User';
 import { AttendanceRepositoryImpl } from 'src/repositoryimpl/AttendanceRepositoryImpl';
 import { UserRepositoryImpl } from 'src/repositoryimpl/UserRepositoryImpl';
+import { RecursiveAlgorithmServiceImpl } from 'src/serviceimpl/Algorithm/RecursiveAlgorithmServiceImpl';
+import { StudentPointRecursiveFunction } from 'src/serviceimpl/Algorithm/StudentPointRecursiveFunction';
 import { AttendanceServiceImpl } from 'src/serviceimpl/AttendanceServiceImpl';
 import { UserServiceImpl } from 'src/serviceimpl/UserServiceImpl';
 import { UserController } from '../controller/UserController';
@@ -38,8 +40,18 @@ export class RepositoryModule {}
 
 @Module({
   imports: [RepositoryModule],
-  providers: [UserServiceImpl, AttendanceServiceImpl],
-  exports: [UserServiceImpl, AttendanceServiceImpl],
+  providers: [
+    UserServiceImpl,
+    AttendanceServiceImpl,
+    RecursiveAlgorithmServiceImpl,
+    StudentPointRecursiveFunction,
+  ],
+  exports: [
+    UserServiceImpl,
+    AttendanceServiceImpl,
+    RecursiveAlgorithmServiceImpl,
+    StudentPointRecursiveFunction,
+  ],
 })
 export class ServiceModule {}
 
