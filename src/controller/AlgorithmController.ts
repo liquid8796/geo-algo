@@ -32,9 +32,7 @@ export class AlgorithmController {
     @Query('t') t: number,
     @Query('s') s: number,
   ) {
-    for (let index = 0; index < array.length; index++) {
-      const element = array[index];
-    }
+    for (let i = 0; i < s.length; i++) {}
     return S;
   }
 
