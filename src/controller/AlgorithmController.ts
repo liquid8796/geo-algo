@@ -1,4 +1,4 @@
-import { Body, Controller, Get } from '@nestjs/common';
+import { Body, Controller, Get, Query } from '@nestjs/common';
 
 const S = [
   [
@@ -25,6 +25,19 @@ const S = [
 
 @Controller('algo')
 export class AlgorithmController {
+  @Get('/generate')
+  generateListStudents(
+    @Query('n') n: number,
+    @Query('q') q: number,
+    @Query('t') t: number,
+    @Query('s') s: number,
+  ) {
+    for (let index = 0; index < array.length; index++) {
+      const element = array[index];
+    }
+    return S;
+  }
+
   @Get('/run')
   executeAlgo(@Body() list: any[]) {
     const startTime = performance.now();
