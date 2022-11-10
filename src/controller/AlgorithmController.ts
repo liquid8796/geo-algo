@@ -39,7 +39,10 @@ export class AlgorithmController {
     @Query('t') t: number,
     @Query('s') s: number,
   ) {
-    return S;
+    const result: any[][][] = [];
+    for (let i = 0; i < n; i++) {
+      for (let j = 0; j < q; j++) {}
+    }
   }
 
   @Get('/run')
