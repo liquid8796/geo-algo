@@ -33,12 +33,7 @@ export class AlgorithmController {
     private recursiveAlgorithmService: RecursiveAlgorithmService,
   ) {}
   @Get('/generate')
-  generateListStudents(
-    @Query('n') n: number,
-    @Query('q') q: number,
-    @Query('t') t: number,
-    @Query('s') s: number,
-  ) {
+  generateListStudents(@Query('n') n: number, @Query('q') q: number) {
     const result: any[][][] = [];
     for (let i = 0; i < n; i++) {
       for (let j = 0; j < q; j++) {
