@@ -66,7 +66,6 @@ export class AlgorithmController {
       for (let j = 0; j < students.length; j++) {
         if (totalPoint[j] !== null) {
           // totalPoint[j] = this.binaryStudentSum(students[j], 1);
-          // totalPoint[j] = this.sumStudent(students[j]);
           totalPoint[j] = this.recursiveAlgorithmService.RecursiveBinarySum(
             students[j],
           );
@@ -92,27 +91,6 @@ export class AlgorithmController {
         return { index: totalPoint.indexOf(e), total: e };
       })
       .filter((e) => e.total === Math.max(...totalPoint));
-  }
-
-  binaryStudentSum(list: any[][], type: number) {
-    return this.recursiveStudentSum(0, list.length - 1, list, type);
-  }
-
-  recursiveStudentSum(
-    low: number,
-    high: number,
-    list: number[][],
-    type: number,
-  ): number {
-    if (low == high) return list[low][type];
-    else {
-      const mid = Math.floor((low + high) / 2);
-
-      return (
-        this.recursiveStudentSum(low, mid, list, 1) +
-        this.recursiveStudentSum(mid + 1, high, list, 1)
-      );
-    }
   }
 
   sumStudent(list: any[][]) {
