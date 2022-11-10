@@ -68,7 +68,11 @@ export class AlgorithmController {
       for (let j = 0; j < students.length; j++) {
         if (totalPoint[j] !== null) {
           // totalPoint[j] = this.binaryStudentSum(students[j], 1);
-          totalPoint[j] = this.sumStudent(students[j]);
+          // totalPoint[j] = this.sumStudent(students[j]);
+          totalPoint[j] = this.recursiveAlgorithmService.RecursiveBinarySum(
+            students[j],
+            this.recursiveFunction,
+          );
         }
         if (j > 0) {
           if (minTime[i] > students[j][i][0]) {
