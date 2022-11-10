@@ -5,10 +5,11 @@ import { RecursiveAlgorithmService } from 'src/service/Algorithm/RecursiveAlgori
 export class RecursiveAlgorithmServiceImpl
   implements RecursiveAlgorithmService
 {
-  RecursiveBinarySum(list: any, recursiveFunction: any): number {
-    return recursiveFunction(0, list.length - 1, list);
+  RecursiveBinarySum(list: any): number {
+    return this.recursiveFunction(0, list.length - 1, list);
   }
-  recursiveFunction(low: number, high: number, list: any[][]): number {
+
+  private recursiveFunction(low: number, high: number, list: any[][]): number {
     if (low == high) return list[low][1];
     else {
       const mid = Math.floor((low + high) / 2);
