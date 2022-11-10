@@ -5,7 +5,7 @@ import { RecursiveAlgorithmService } from 'src/service/Algorithm/RecursiveAlgori
 export class RecursiveAlgorithmServiceImpl
   implements RecursiveAlgorithmService
 {
-  RecursiveBinarySum(list: any, recursiveFunction: Function): number {
+  RecursiveBinarySum(list: any, recursiveFunction: any): number {
     return recursiveFunction(0, list.length - 1, list);
   }
 }
