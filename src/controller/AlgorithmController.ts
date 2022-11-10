@@ -31,8 +31,6 @@ export class AlgorithmController {
   constructor(
     @Inject(RecursiveAlgorithmServiceImpl)
     private recursiveAlgorithmService: RecursiveAlgorithmService,
-    @Inject(StudentPointRecursiveFunction)
-    private recursiveFunction: RecursiveFunction,
   ) {}
   @Get('/generate')
   generateListStudents(
@@ -71,7 +69,6 @@ export class AlgorithmController {
           // totalPoint[j] = this.sumStudent(students[j]);
           totalPoint[j] = this.recursiveAlgorithmService.RecursiveBinarySum(
             students[j],
-            this.recursiveFunction,
           );
         }
         if (j > 0) {
