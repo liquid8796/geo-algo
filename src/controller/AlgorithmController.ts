@@ -1,7 +1,6 @@
 import { Body, Controller, Get, Inject, Query } from '@nestjs/common';
 import { RecursiveAlgorithmService } from 'src/service/Algorithm/RecursiveAlgorithmService';
 import { RecursiveAlgorithmServiceImpl } from 'src/serviceimpl/Algorithm/RecursiveAlgorithmServiceImpl';
-import { StudentPointRecursiveFunction } from 'src/serviceimpl/Algorithm/StudentPointRecursiveFunction';
 
 const S = [
   [
