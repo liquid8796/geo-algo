@@ -41,6 +41,7 @@ export class AlgorithmController {
         result[i][j][1] = Math.floor(Math.random() * 11);
       }
     }
+    return result;
   }
 
   @Get('/run')
