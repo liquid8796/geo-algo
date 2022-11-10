@@ -34,7 +34,13 @@ export class AlgorithmController {
   ) {}
   @Get('/generate')
   generateListStudents(@Query('n') n: number, @Query('q') q: number) {
-    let result: any[][][] = [];
+    let result: any[][][] = [
+      [
+        [113, 10],
+        [499, 6],
+        [377, 5],
+      ],
+    ];
     for (let i = 0; i < n; i++) {
       for (let j = 0; j < q; j++) {
         result[i][j][0] = Math.floor(Math.random() * 1000);
