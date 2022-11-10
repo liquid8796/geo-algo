@@ -6,10 +6,10 @@ export class RecursiveAlgorithmServiceImpl
   implements RecursiveAlgorithmService
 {
   RecursiveBinarySum(list: any): number {
-    return this.StudentPointRecursiveFunction(0, list.length - 1, list);
+    return this.studentPointRecursiveFunction(0, list.length - 1, list);
   }
 
-  private StudentPointRecursiveFunction(
+  private studentPointRecursiveFunction(
     low: number,
     high: number,
     list: any[][],
@@ -19,8 +19,8 @@ export class RecursiveAlgorithmServiceImpl
       const mid = Math.floor((low + high) / 2);
 
       return (
-        this.StudentPointRecursiveFunction(low, mid, list) +
-        this.StudentPointRecursiveFunction(mid + 1, high, list)
+        this.studentPointRecursiveFunction(low, mid, list) +
+        this.studentPointRecursiveFunction(mid + 1, high, list)
       );
     }
   }
