@@ -44,13 +44,11 @@ export class RepositoryModule {}
     UserServiceImpl,
     AttendanceServiceImpl,
     RecursiveAlgorithmServiceImpl,
-    StudentPointRecursiveFunction,
   ],
   exports: [
     UserServiceImpl,
     AttendanceServiceImpl,
     RecursiveAlgorithmServiceImpl,
-    StudentPointRecursiveFunction,
   ],
 })
 export class ServiceModule {}
