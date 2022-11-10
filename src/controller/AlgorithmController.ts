@@ -1,4 +1,6 @@
-import { Body, Controller, Get, Query } from '@nestjs/common';
+import { Body, Controller, Get, Inject, Query } from '@nestjs/common';
+import { RecursiveAlgorithmService } from 'src/service/Algorithm/RecursiveAlgorithmService';
+import { RecursiveAlgorithmServiceImpl } from 'src/serviceimpl/Algorithm/RecursiveAlgorithmServiceImpl';
 
 const S = [
   [
@@ -25,6 +27,10 @@ const S = [
 
 @Controller('algo')
 export class AlgorithmController {
+  constructor(
+    @Inject(RecursiveAlgorithmServiceImpl)
+    private recursiveAlgorithmService: RecursiveAlgorithmService,
+  ) {}
   @Get('/generate')
   generateListStudents(
     @Query('n') n: number,
