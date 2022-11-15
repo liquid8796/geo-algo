@@ -31,20 +31,25 @@ export class HomeController {
     return `This action returns a #${id} param testing`;
   }
 
-  @Get('/get-current-total-day')
+  @Get('/get-weekdays')
   getCurrentTotalDay() {
-    const totalDay = new Date(2017, 7, 0).getDate();
-    return totalDay;
+    const result = new Date('11/15/2022').getDay();
+    return result;
   }
 
   @Get('/get-current-time')
   getCurrentTime() {
     const time = new Date();
-    return time;
+    return new Date().getUTCMonth() + 1;
   }
 
   @Get('/env')
   getEnv() {
     return process.env;
+  }
+
+  @Get('/version')
+  getCurrentVersion() {
+    return '1.0.1';
   }
 }

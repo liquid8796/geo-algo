@@ -2,6 +2,7 @@ import { NestFactory } from '@nestjs/core';
 import { AppModule } from './config/AppModule';
 import { TimeoutInterceptor } from './config/TimeoutInterceptor';
 import * as bodyParser from 'body-parser';
+import { VersioningType } from '@nestjs/common';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule, { abortOnError: false });
