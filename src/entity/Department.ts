@@ -19,8 +19,8 @@ import { User } from './User';
 export class Department extends Model {
   @PrimaryKey
   @AutoIncrement
-  @AllowNull(false)
   @Column(DataTypes.STRING(11))
+  @AllowNull(false)
   code: string;
 
   @AllowNull(false)
