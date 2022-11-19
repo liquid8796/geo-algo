@@ -20,6 +20,7 @@ const sequelizeInstance = {
         acquire: 3600000,
         idle: 10000,
       },
+      logging: false,
     });
     sequelize.addModels([
       User,
