@@ -9,7 +9,6 @@ import { User } from 'src/entity/User';
 import pg from 'pg';
 
 const uri = process.env.DB_URI || '';
-const dialect = process.env.DB || '';
 
 const sequelizeInstance = {
   provide: 'SEQUELIZE',
