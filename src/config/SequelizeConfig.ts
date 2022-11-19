@@ -31,7 +31,7 @@ const sequelizeInstance = {
       AttendanceBreak,
       AttendanceBreakRequest,
     ]);
-    await sequelize.sync({ force: false, alter: false });
+    await sequelize.sync({ force: true, alter: true });
     return sequelize;
   },
 };
